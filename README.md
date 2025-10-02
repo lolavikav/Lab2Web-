@@ -34,7 +34,41 @@ Selector dipakai untuk memilih elemen tertentu.
 - <img width="772" height="1318" alt="code 14" src="https://github.com/user-attachments/assets/24f23eae-21f1-43dc-864f-1bc8c59f18f7" />
 Output:
 <img width="881" height="668" alt="55" src="https://github.com/user-attachments/assets/f42ba254-846c-4648-9047-c13623bae03a" />
+## Pertanyaan dan Tugas 
+## 1. Lakukan eksperimen dengan mengubah dan menambah properti dan nilai pada kode CSS dengan mengacu pada CSS Cheat Sheet yang diberikan pada file terpisah dari modul ini.
+Saya mencoba menambahkan beberapa properti CSS, contohnya:
+Penjelasan:
+<img width="1572" height="1508" alt="code 15" src="https://github.com/user-attachments/assets/29451ccd-a6bf-4397-bfbb-3fbad0c7916b" />
+Output
+<img width="887" height="217" alt="Screenshot 2025-10-02 234957" src="https://github.com/user-attachments/assets/4bcb9297-88d3-4a23-bace-6bc0f8d947c8" />
+Penjelasan:
+- Body: diberi background biru muda (#f0f8ff) dan font diganti dengan Arial supaya tampilan lebih modern.
+- Heading (h1): diatur agar berwarna biru tua, posisinya rata tengah, hurufnya otomatis menjadi kapital semua, dan jarak antar huruf dibuat lebih lebar agar terlihat tegas.
+- Paragraf (p) dibuat berwarna abu-abu gelap, rata tengah, huruf agak besar (18px), dan bergaya miring agar berbeda dengan teks judul.
+Dengan pengaturan ini, teks “Halo, nama saya Fira” tampil lebih jelas dan menarik, serta memberikan contoh nyata bagaimana CSS dapat mengubah tampilan halaman web hanya dengan beberapa baris kode.
+## 2.Apa perbedaan pendeklarasian CSS elemen h1 {...} dengan #intro h1 {...}? berikan penjelasannya!
+Penjelasan:
+<img width="891" height="753" alt="Screenshot 2025-10-02 235538" src="https://github.com/user-attachments/assets/d895c1a5-fc50-4ce7-99b3-7fba0d6bd282" />
+Output:
+<img width="882" height="261" alt="Screenshot 2025-10-02 235515" src="https://github.com/user-attachments/assets/c5edf45b-dfc7-4de0-a707-2673454e2564" />
+Penjelasan:
+Deklarasi `h1[...]` adalah aturan CSS yang berlaku untuk semua elemen `<h1>` pada halaman web, tanpa memandang letaknya. Jadi jika ada lima buah heading `<h1>` di halaman, maka semuanya akan terkena style yang sama. Aturan ini bersifat global untuk elemen tertentu.
+Sementara itu, deklarasi `#intro h1 {...}` jauh lebih spesifik. Aturan ini hanya berlaku untuk elemen `<h1>` yang berada di dalam elemen lain yang memiliki atribut `id="intro"`. Artinya, jika ada beberapa heading `<h1>` di halaman, hanya `<h1>` yang berada di dalam `<div id="intro">...</div>` saja yang akan menerima style tersebut, sedangkan `<h1>` lainnya tidak terpengaruh.
+## 3. Apabila ada deklarasi CSS secara internal, lalu ditambahkan CSS eksternal dan inline CSS pada elemen yang sama. Deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+Penjelasan:
 
+Dalam CSS terdapat konsep yang disebut specificity (tingkat kekuatan aturan). Browser memiliki urutan prioritas dalam membaca style, yaitu:
+
+Eksternal CSS → ditulis dalam file terpisah (.css) dan dipanggil dengan <link>.
+Internal CSS → ditulis di dalam file HTML pada tag <style> dalam <head>.
+Inline CSS → ditulis langsung dalam atribut style pada elemen HTML.
+Jika ketiga jenis CSS tersebut diterapkan pada elemen yang sama, maka browser akan menampilkan style dari inline CSS, karena memiliki prioritas tertinggi. Internal CSS akan menimpa eksternal, sedangkan inline akan menimpa keduanya.
+4. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya! ( <p id="paragraf-1" class="text-paragraf"> )
+Penjelasan Hasil:
+
+Paragraf pertama (class="text-paragraf") → tampil merah.
+Paragraf kedua (id="paragraf-1") → tampil biru.
+Paragraf ketiga (id="paragraf-1" class="text-paragraf") → tetap biru, karena aturan ID selector lebih kuat daripada class selector.
 
 
 
