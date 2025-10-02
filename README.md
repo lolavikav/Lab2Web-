@@ -56,19 +56,25 @@ Deklarasi `h1[...]` adalah aturan CSS yang berlaku untuk semua elemen `<h1>` pad
 Sementara itu, deklarasi `#intro h1 {...}` jauh lebih spesifik. Aturan ini hanya berlaku untuk elemen `<h1>` yang berada di dalam elemen lain yang memiliki atribut `id="intro"`. Artinya, jika ada beberapa heading `<h1>` di halaman, hanya `<h1>` yang berada di dalam `<div id="intro">...</div>` saja yang akan menerima style tersebut, sedangkan `<h1>` lainnya tidak terpengaruh.
 ## 3. Apabila ada deklarasi CSS secara internal, lalu ditambahkan CSS eksternal dan inline CSS pada elemen yang sama. Deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
 Penjelasan:
-
+<img width="947" height="689" alt="Screenshot 2025-10-02 235946" src="https://github.com/user-attachments/assets/663e37aa-0410-4b2a-bd3f-90d2f017d3ee" />
+<img width="434" height="154" alt="Screenshot 2025-10-03 000259" src="https://github.com/user-attachments/assets/25a3d815-48b7-40c3-aa42-94b184ca9a7a" />
+Output:
+<img width="885" height="205" alt="Screenshot 2025-10-03 000247" src="https://github.com/user-attachments/assets/edab2a94-ef44-49f7-832a-a9cadba94777" />
+Penjelasan:
 Dalam CSS terdapat konsep yang disebut specificity (tingkat kekuatan aturan). Browser memiliki urutan prioritas dalam membaca style, yaitu:
-
-Eksternal CSS → ditulis dalam file terpisah (.css) dan dipanggil dengan <link>.
-Internal CSS → ditulis di dalam file HTML pada tag <style> dalam <head>.
-Inline CSS → ditulis langsung dalam atribut style pada elemen HTML.
+- Eksternal CSS → ditulis dalam file terpisah `(.css)` dan dipanggil dengan `<link>`.
+- Internal CSS → ditulis di dalam file HTML pada tag `<style>` dalam `<head>`.
+- Inline CSS → ditulis langsung dalam atribut `style` pada elemen HTML.
 Jika ketiga jenis CSS tersebut diterapkan pada elemen yang sama, maka browser akan menampilkan style dari inline CSS, karena memiliki prioritas tertinggi. Internal CSS akan menimpa eksternal, sedangkan inline akan menimpa keduanya.
-4. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya! ( <p id="paragraf-1" class="text-paragraf"> )
+## 4. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya! `( <p id="paragraf-1" class="text-paragraf"> )`
 Penjelasan Hasil:
-
-Paragraf pertama (class="text-paragraf") → tampil merah.
-Paragraf kedua (id="paragraf-1") → tampil biru.
-Paragraf ketiga (id="paragraf-1" class="text-paragraf") → tetap biru, karena aturan ID selector lebih kuat daripada class selector.
+<img width="902" height="919" alt="Screenshot 2025-10-03 000711" src="https://github.com/user-attachments/assets/20c456b9-746c-4b44-a224-f68d14b8ef71" />
+Output:
+<img width="1024" height="275" alt="Screenshot 2025-10-03 000734" src="https://github.com/user-attachments/assets/6105a8a0-c703-4b44-b8b5-fddf11d5ef97" />
+Penjelasan Hasil:
+- Paragraf pertama `(class="text-paragraf")` → tampil merah.
+- Paragraf kedua `(id="paragraf-1")` → tampil biru.
+- Paragraf ketiga `(id="paragraf-1" class="text-paragraf")` → tetap biru, karena aturan ID selector lebih kuat daripada class selector.
 
 
 
